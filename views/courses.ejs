@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh_cn">
+<% include includes/head.ejs %>
+<body>
+<% include includes/header.ejs %>
+<div id="content">
+    <div class="main-content wrapper">
+        <div class="inner">
+            <div class="banner">
+                <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-generic" data-slide-to="1" class=""></li>
+                        <li data-target="#carousel-generic" data-slide-to="2" class=""></li>
+                        <!--<li data-target="#carousel-generic" data-slide-to="3" class=""></li>-->
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <a href="./#summer" onclick="_czc.push(['_trackEvent', '全部课程', '广告', '暑托班']);">
+                                <img src="/images/carousel/shutuo.jpg">
+                            </a>
+                        </div>
+                        <!--<div class="item active">
+                            <a href="./#winter" onclick="_czc.push(['_trackEvent', '全部课程', '广告', '寒假班']);">
+                            <img src="/images/carousel/winter.jpg">
+                            </a>
+                        </div>-->
+                        <div class="item">
+                            <a href="./#trustee" onclick="_czc.push(['_trackEvent', '全部课程', '广告', '晚托班']);">
+                                <img src="/images/carousel/2.jpg">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="./#online" onclick="_czc.push(['_trackEvent', '全部课程', '广告', '网上辅导']);">
+                                <img src="/images/carousel/3.jpg">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="course">
+                <span>Course types：</span>
+                <ul role="tablist" id="tab">
+                    <li class="active">
+                        <a href="#child" role="tab" data-toggle="tab"
+                           onclick="_czc.push(['_trackEvent', '全部课程', '切换TAB', '哈佛少儿英语']);">Children English<i
+                                    class="zhaojun-hot"></i></a></li>
+                    <li><a href="#junior" role="tab" data-toggle="tab"
+                           onclick="_czc.push(['_trackEvent', '全部课程', '切换TAB', '小学部']);">Primary school</a></li>
+                    <li><a href="#middle" role="tab" data-toggle="tab"
+                           onclick="_czc.push(['_trackEvent', '全部课程', '切换TAB', '中学部']);">Middle school</a></li>
+                    <li><a href="#high" role="tab" data-toggle="tab"
+                           onclick="_czc.push(['_trackEvent', '全部课程', '切换TAB', '高中部']);">High school</a></li>
+                    <li><a href="#trustee" role="tab" data-toggle="tab"
+                           onclick="_czc.push(['_trackEvent', '全部课程', '切换TAB', '晚托班']);">Night Care</a></li>
+                    <li style="display: none;"><a href="#summer" role="tab" data-toggle="tab"
+                                                 onclick="_czc.push(['_trackEvent', '全部课程', '切换TAB', '暑托班']);">Summer
+                            Care</a></li>
+                    <li><a href="#online" role="tab" data-toggle="tab"
+                           onclick="_czc.push(['_trackEvent', '全部课程', '切换TAB', '网上辅导']);">Oneline Tutoring</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="child">
+                    <% include courses/tab-0.ejs %>
+                </div>
+                <div class="tab-pane" id="junior">
+                    <% include courses/tab-1.ejs %>
+                </div>
+                <div class="tab-pane" id="middle">
+                    <% include courses/tab-2.ejs %>
+                </div>
+                <div class="tab-pane" id="high">
+                    <% include courses/tab-3.ejs %>
+                </div>
+                <div class="tab-pane" id="trustee">
+                    <% include courses/tab-4.ejs %>
+                </div>
+                <div class="tab-pane" id="summer">
+                    <% include courses/tab-7.ejs %>
+                </div>
+                <div class="tab-pane" id="online">
+                    <% include courses/tab-5.ejs %>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="cover">
+    <div class="cover-content">
+        <img src="/images/cover-c.jpg" alt=""/>
+
+        <div class="cover-close"></div>
+    </div>
+</div>
+<% include includes/footer.ejs %>
+<script>
+    $(function () {
+        $(".main table tr").children("td:even()").css({"font-size": "32px"});
+        $(".main table tr").children("td:odd()").css({"font-size": "24px"});
+    })
+</script>
+</body>
+</html>

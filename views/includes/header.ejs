@@ -1,0 +1,47 @@
+<style>
+    .change-lang {
+        position: absolute;
+        z-index: 10000;
+        font-size: 18px;
+        top: 130px;
+        margin: auto;
+        width: 1080px;
+        text-align: right;
+        padding-right: 100px;
+        float: right;
+
+    }
+
+    .change-lang a {
+        color: #1c332a;
+    }
+
+    .wraper {
+        position: relative;
+    }
+</style>
+<div id="header">
+    <div class="logo wrapper">
+        <div class="change-lang">
+            <a href="http://www.seung.cn/">>>中文版</a>
+        </div>
+        <div class="inner">
+            <a href="/"><img src="/images/logo.png"/></a>
+            <div class="telephone">Telephone：400-689-0661 <br/></div>
+        </div>
+    </div>
+
+    <div class="nav wrapper">
+        <div class="inner">
+            <ul>
+                <% nav.forEach(function (item, i) { %>
+                <% if(i === index){ %>
+                <li class="current"><a href="<%= item.url %>"><%= item.name %></a></li>
+                <% }else{ %>
+                <li><a href="<%= item.url %>"><%= item.name %></a></li>
+                <% } %>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>

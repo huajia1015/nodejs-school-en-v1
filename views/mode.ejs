@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh_cn">
+<% include includes/head.ejs %>
+<body>
+<% include includes/header.ejs %>
+<div id="content">
+    <div class="main-content wrapper">
+        <div class="inner">
+            <div class="course">
+                <ul role="tablist" id="tab">
+                    <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Group pattern</a></li>
+                    <li><a href="#tab-2" role="tab" data-toggle="tab">One by one pattern</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab-1">
+                    <% include modes/tab-1.ejs %>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                    <% include modes/tab-2.ejs %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include includes/footer.ejs %>
+</body>
+</html>
